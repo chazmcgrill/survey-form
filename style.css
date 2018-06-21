@@ -36,6 +36,7 @@ label, legend {
 input, select, textarea {
   border: 2px solid black;
   padding: 15px 10px;
+  font-family: 'Montserrat', sans-serif;
   font-size: 0.8rem;
 }
 
@@ -43,4 +44,39 @@ input[type=submit]:hover {
   background: black;
   color: white;
   cursor: pointer;
+}
+
+.checkbox-wrapper {
+  box-sizing: border-box;
+  display: block;
+  position: relative;
+  padding: 5px 0 0 35px;
+  height: 25px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox-wrapper input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+.checkbox-wrapper:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.checkbox-wrapper input:checked ~ .checkmark {
+  border: 4px solid #eee;
+  background-color: #2196F3;
 }
