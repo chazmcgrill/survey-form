@@ -6,13 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Survey Form</title>
   <link rel="stylesheet" href="./style.css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=PT+Serif|Roboto+Condensed:400,700" rel="stylesheet">
 </head>
 <body>
   <h1 id="title">Survey Form</h1>
   
   <form action="" id="survey-form">
-    <p id="description">JS Survey</p>
+    <p id="description">Javascript Survey</p>
 
     <label for="name" id="label-name">Name</label>
     <input type="text" name="name" id="name" placeholder="enter your name">
@@ -22,7 +22,7 @@
 
     <!-- check for number and range -->
     <label for="number" id="label-number" min="0" max="100">Years Coding</label>
-    <input type="number" name="number" id="number" placeholder="enter years coding">
+    <input type="number" name="number" id="number" placeholder="how many years coding?">
 
     <!-- dropdown -->
     <label for="dropdown">Frontend Framework</label>
@@ -36,14 +36,22 @@
     <!-- radio buttons group using name -->
     <fieldset>
       <legend>Styling</legend>
-      <input type="radio" name="radio-style" id="css" checked="checked">
-      <label for="css">CSS</label>
-      <input type="radio" name="radio-style" id="sass">
-      <label for="sass">SASS</label>
-      <input type="radio" name="radio-style" id="less">
-      <label for="less">LESS</label>
-      <input type="radio" name="radio-style" id="scss">
-      <label for="scss">SCSS</label>
+      <label for="css" class="radio-wrapper">CSS
+        <input type="radio" name="radio-style" id="css" checked="checked">
+        <span class="radio-mark"></span>
+      </label>
+      <label for="sass" class="radio-wrapper">SASS
+        <input type="radio" name="radio-style" id="sass">
+        <span class="radio-mark"></span>
+      </label>
+      <label for="less" class="radio-wrapper">LESS
+        <input type="radio" name="radio-style" id="less">
+        <span class="radio-mark"></span>
+      </label>
+      <label for="scss" class="radio-wrapper">SCSS
+        <input type="radio" name="radio-style" id="scss">
+        <span class="radio-mark"></span>
+      </label>
     </fieldset>
 
     <!-- checkboxes with value attr -->
@@ -51,32 +59,32 @@
       <legend>Other Technologies</legend>
       <label for="php" class="checkbox-wrapper">PHP
         <input type="checkbox" name="other-techs" id="php">
-        <span class="checkmark"></span>
+        <span class="check-mark"></span>
       </label>
       <label for="C#/C++" class="checkbox-wrapper">C#/C++
         <input type="checkbox" name="other-techs" id="C#/C++">
-        <span class="checkmark"></span>
+        <span class="check-mark"></span>
       </label>
       <label for="mysql" class="checkbox-wrapper">MySQL
         <input type="checkbox" name="other-techs" id="mysql">
-        <span class="checkmark"></span>
+        <span class="check-mark"></span>
       </label>
       <label for="python" class="checkbox-wrapper">Python
         <input type="checkbox" name="other-techs" id="python">
-        <span class="checkmark"></span>
+        <span class="check-mark"></span>
       </label>
       <label for="java" class="checkbox-wrapper">Java
         <input type="checkbox" name="other-techs" id="java">
-        <span class="checkmark"></span>
+        <span class="check-mark"></span>
       </label>
       <label for="kotlin" class="checkbox-wrapper">Kotlin
         <input type="checkbox" name="other-techs" id="kotlin">
-        <span class="checkmark"></span>
+        <span class="check-mark"></span>
       </label>
     </fieldset>
 
     <label for="comments" id="label-comments">Extra Comments</label>
-    <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+    <textarea name="comments" id="comments" cols="30" rows="10" placeholder="any extra info..."></textarea>
     <input type="submit" value="Submit">
   </form>
 </body>
