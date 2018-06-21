@@ -8,6 +8,62 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <h1>Survey Form</h1>
+  <h1 id="title">Survey Form</h1>
+  <p id="description">JS Survey</p>
+  <form action="" id="survey-form">
+
+    <label for="name" id="label-name">Name:</label>
+    <input type="text" name="name" id="name" placeholder="enter your name">
+
+    <label for="email" id="label-email">Email:</label>
+    <input type="email" name="email" id="email" placeholder="enter your email">
+
+    <!-- check for number and range -->
+    <label for="number" id="label-number" min="0" max="100">Years Coding:</label>
+    <input type="number" name="number" id="number" placeholder="enter years coding">
+
+    <!-- dropdown -->
+    <label for="dropdown">Frontend Framework:</label>
+    <select name="language" id="dropdown">
+      <option value="none">None</option>
+      <option value="react">React</option>
+      <option value="angular">Angular</option>
+      <option value="vuejs">VueJs</option>
+    </select>
+
+    <!-- radio buttons group using name -->
+    <fieldset>
+      <legend>Styling</legend>
+      <input type="radio" name="radio-style" id="css" checked="checked">
+      <label for="css">CSS</label>
+      <input type="radio" name="radio-style" id="sass">
+      <label for="sass">SASS</label>
+      <input type="radio" name="radio-style" id="less">
+      <label for="less">LESS</label>
+      <input type="radio" name="radio-style" id="scss">
+      <label for="scss">SCSS</label>
+    </fieldset>
+
+    <!-- checkboxes with value attr -->
+    <fieldset>
+      <legend>Other Technologies</legend>
+      <input type="checkbox" name="other-techs" id="php">
+      <label for="php">PHP</label>
+      <input type="checkbox" name="other-techs" id="C#/C++">
+      <label for="C#/C++">C#/C++</label>
+      <input type="checkbox" name="other-techs" id="mysql">
+      <label for="mysql">MySQL</label>
+      <input type="checkbox" name="other-techs" id="python">
+      <label for="python">Python</label>
+      <input type="checkbox" name="other-techs" id="java">
+      <label for="java">Java</label>
+      <input type="checkbox" name="other-techs" id="kotlin">
+      <label for="kotlin">Kotlin</label>
+    </fieldset>
+
+    <label for="comments" id="label-comments">Extra Comments:</label>
+    <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+    <input type="submit" value="Submit">
+  </form>
 </body>
 </html>
