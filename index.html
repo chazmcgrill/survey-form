@@ -14,14 +14,14 @@
   <form action="" id="survey-form">
     <p id="description">Javascript Survey</p>
 
-    <label for="name" id="label-name">Name</label>
-    <input type="text" name="name" id="name" placeholder="enter your name">
+    <label for="name" id="name-label">Name</label>
+    <input type="text" name="name" id="name" placeholder="enter your name" required>
 
-    <label for="email" id="label-email">Email</label>
-    <input type="email" name="email" id="email" placeholder="enter your email">
+    <label for="email" id="email-label">Email</label>
+    <input type="email" name="email" id="email" placeholder="enter your email" required>
 
-    <label for="number" id="label-number" min="0" max="100">Years Coding</label>
-    <input type="number" name="number" id="number" placeholder="how many years coding?">
+    <label for="number" id="number-label">Years Coding</label>
+    <input type="number" name="number" id="number" placeholder="how many years coding?" min="0" max="100">
 
     <label for="dropdown">Favourite Frontend Framework</label>
     <select name="language" id="dropdown">
@@ -31,22 +31,22 @@
       <option value="vuejs">VueJs</option>
     </select>
 
-    <fieldset>
+    <fieldset name="radio-style">
       <legend>Favourite Styling Language</legend>
       <label for="css" class="radio-wrapper">CSS
-        <input type="radio" name="radio-style" id="css" checked="checked">
+        <input type="radio" name="radio-style" id="css" checked="checked" value="css">
         <span class="radio-mark"></span>
       </label>
       <label for="sass" class="radio-wrapper">SASS
-        <input type="radio" name="radio-style" id="sass">
+        <input type="radio" name="radio-style" id="sass" value="sass">
         <span class="radio-mark"></span>
       </label>
       <label for="less" class="radio-wrapper">LESS
-        <input type="radio" name="radio-style" id="less">
+        <input type="radio" name="radio-style" id="less" value="less">
         <span class="radio-mark"></span>
       </label>
       <label for="scss" class="radio-wrapper">SCSS
-        <input type="radio" name="radio-style" id="scss">
+        <input type="radio" name="radio-style" id="scss" value="scss">
         <span class="radio-mark"></span>
       </label>
     </fieldset>
@@ -54,34 +54,34 @@
     <fieldset>
       <legend>Other Technologies Used</legend>
       <label for="php" class="checkbox-wrapper">PHP
-        <input type="checkbox" name="other-techs" id="php">
+        <input type="checkbox" name="other-techs" id="php" value="php">
         <span class="check-mark"></span>
       </label>
-      <label for="C#/C++" class="checkbox-wrapper">C#/C++
-        <input type="checkbox" name="other-techs" id="C#/C++">
+      <label for="clang" class="checkbox-wrapper">C#/C++
+        <input type="checkbox" name="other-techs" id="clang" value="clang">
         <span class="check-mark"></span>
       </label>
       <label for="mysql" class="checkbox-wrapper">MySQL
-        <input type="checkbox" name="other-techs" id="mysql">
+        <input type="checkbox" name="other-techs" id="mysql" value="mysql">
         <span class="check-mark"></span>
       </label>
       <label for="python" class="checkbox-wrapper">Python
-        <input type="checkbox" name="other-techs" id="python">
+        <input type="checkbox" name="other-techs" id="python" value="python">
         <span class="check-mark"></span>
       </label>
       <label for="java" class="checkbox-wrapper">Java
-        <input type="checkbox" name="other-techs" id="java">
+        <input type="checkbox" name="other-techs" id="java" value="java">
         <span class="check-mark"></span>
       </label>
       <label for="kotlin" class="checkbox-wrapper">Kotlin
-        <input type="checkbox" name="other-techs" id="kotlin">
+        <input type="checkbox" name="other-techs" id="kotlin" value="kotlin">
         <span class="check-mark"></span>
       </label>
     </fieldset>
 
     <label for="comments" id="label-comments">Extra Comments</label>
     <textarea name="comments" id="comments" cols="30" rows="10" placeholder="any extra info..."></textarea>
-    <input type="submit" value="Submit">
+    <input id="submit" type="submit" value="Submit">
   </form>
 </body>
 </html>
